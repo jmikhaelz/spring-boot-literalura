@@ -1,0 +1,29 @@
+Requerimientos       
+Menu
+buscar libro por titulo
+registrados en DB
+    autores
+    LIBROS 
+    idioma
+    autores vivos en un determinado año
+salir
+
+toString
+libro
+    titulo
+    Autor
+    idioma
+    numero de descargas/solicitado                        
+Autor
+    Nombre
+    fec nac
+    fec fella
+    libros
+
+idioma Abreviaturas
+
+
+Restricciones
+a;erta de no encontro librop
+no se registrar 2 veces el libro
+            
