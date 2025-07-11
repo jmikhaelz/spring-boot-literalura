@@ -8,6 +8,7 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
@@ -23,7 +24,7 @@ public class Author {
     private Integer nacimiento;
     private Integer fallecimiento;
 
-    @ManyToMany(mappedBy = "autores", cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "autores", cascade = CascadeType.PERSIST)
     private List<Book> libros;
 
     public Author() {
