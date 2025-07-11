@@ -9,7 +9,6 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -196,7 +195,7 @@ public class MenuInteractivo implements CommandLineRunner {
             // Solicitamos peticion a la API
             URI uri = URI.create("https://gutendex.com/books/?search="
                     + URLEncoder.encode(busqueda.toLowerCase(), StandardCharsets.UTF_8));
-            System.out.println(uri.toString());
+            //System.out.println(uri.toString());
             var resquest = new GutendexApiClient().getJSONToString(uri);
             // Procesamiento de JSON a Object
             BookResponse bookCache = new GutendexApiService().getAbout(resquest, BookResponse.class);
