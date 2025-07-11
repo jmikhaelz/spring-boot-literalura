@@ -11,7 +11,7 @@ public record DataBook(
         @JsonAlias("authors") List<DataAuthor> autores,
         @JsonAlias("summaries") List<String> sipnosis,
         @JsonAlias("languages") List<String> idiomas,
-        @JsonAlias("download_count") int descargas) {
+        @JsonAlias("download_count") Integer descargas) {
 
     @Override
     public String toString() {
